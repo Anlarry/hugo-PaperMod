@@ -6,8 +6,8 @@
 
 - id: read_time
   translation:
-    one : "1 min"
-    other: "{{ .Count }} min"
+    one : "⌛ 1 min"
+    other: "⌛ {{ .Count }} min"
 
 - id: toc
   translation: "Table of Contents"
@@ -19,7 +19,7 @@
   translation: "Home"
 
 - id: code_copy
-  translation: "copy"
+  translation: "📄"
 
 - id: code_copied
-  translation: "copied!"
+  translation: "✔"

@@ -1,5 +1,8 @@
 {{- define "main" }}
 
+{{$style := (resources.Get "sass/single-main.scss") | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}

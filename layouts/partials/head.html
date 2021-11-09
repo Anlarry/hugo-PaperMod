@@ -82,7 +82,7 @@
 {{- end }}
 {{- end -}}
 
-{{- /* Highlight.js */}}
+<!-- {{- /* Highlight.js */}}
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
@@ -93,7 +93,18 @@
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
 <script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
 {{- end }}
-{{- end }}
+{{- end }} -->
+
+<!-- <link  rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/xcode.min.css"> -->
+<link ref="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+{{- /* code font */}}
+<link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
 
 {{- /* Favicons */}}
 <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
@@ -165,3 +176,5 @@
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}
 {{- end -}}
+
+{{- partial "helper/katex.html" . -}}
