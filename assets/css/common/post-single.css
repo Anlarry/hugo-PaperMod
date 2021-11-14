@@ -245,6 +245,21 @@
     margin: 1rem auto;
 }
 
+.post-content img[src*="#center-small"] {
+    margin: 1rem auto;
+    width: var(--small-img-width);
+}
+
+.post-content img[src*="#center-medium"] {
+    margin: 1rem auto;
+    width: var(--medium-img-width);
+}
+
+.post-content img[src*="#center-large"] {
+    margin: 1rem auto;
+    width: var(--large-img-width);
+}
+
 .post-content figure.align-center {
     text-align: center;
 }
